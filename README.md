@@ -1,2 +1,2 @@
 # ChromeExtensionTest
-Some basic tried of developing Chrome Extension
+Some basic tries of developing Chrome Extension
