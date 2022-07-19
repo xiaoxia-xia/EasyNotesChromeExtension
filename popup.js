@@ -2,6 +2,7 @@
 let changeColor = document.getElementById("changeColor");
 
 chrome.storage.sync.get("color", ({ color }) => {
+  //Set the color of the button, ( don't effect the function tho. )
   changeColor.style.backgroundColor = color;
 });
 
@@ -9,6 +10,7 @@ chrome.storage.sync.get("color", ({ color }) => {
 changeColor.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
+    //Function calls.
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     function: setPageBackgroundColor,
@@ -19,6 +21,7 @@ changeColor.addEventListener("click", async () => {
 // current page
 function setPageBackgroundColor() {
   chrome.storage.sync.get("color", ({ color }) => {
+    //Incharge of the actual thing that controls the background of the chrome page.
     document.body.style.backgroundColor = color;
   });
 }
