@@ -1,12 +1,20 @@
 button {
-  height: 300px;
-  width: 300px;
+  height: 50px;
+  width: 500px;
   outline: none;
   margin: 10px;
   border: none;
   border-radius: 1px;
 }
 
+#input{
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  size: "100";
+}
 
 
 button.current {
