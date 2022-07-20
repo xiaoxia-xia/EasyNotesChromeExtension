@@ -1,17 +1,36 @@
 // Initialize butotn with users's prefered color
 let changeColor = document.getElementById("changeColor");
 
+let value_ = "";
+
+let input_ = document.getElementById("input");
+// input_.value += "FWIOEJFIOWEJFOIJWEIOFJWEOIJFOWIEJFOIWEIJO";
+console.log(input_.value);
+
+
 chrome.storage.sync.get("color", ({ color }) => {
   //Set the color of the button, ( don't effect the function tho. )
   // console.log("Hello World");
   changeColor.style.backgroundColor = color;
 });
 
+
+input_.addEventListener("click", async() =>{
+  // console.log(input_.value);
+  value_ = input_.value;
+  chrome.storage.sync.set({value_});
+});
+
+
+chrome.storage.sync.get("value_", ({ value_ }) => {
+  input_.value = value_;
+});
+
+
 // When the button is clicked, inject setPageBackgroundColor into current page
 changeColor.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-  console.log("Hello World");
+  // console.log("Hello World");
 
     //Function calls.
   chrome.scripting.executeScript({
@@ -19,6 +38,8 @@ changeColor.addEventListener("click", async () => {
     function: setPageBackgroundColor,
   });
 });
+
+
 
 // The body of this function will be execuetd as a content script inside the
 // current page
