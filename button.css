@@ -44,6 +44,9 @@ button.current {
   display: table;
 }
 
-.button-Group button:hover{
+.save-button-Group button:hover{
+  background-color: bisque;
+}
+.load-button-Group button:hover{
   background-color: bisque;
 }
