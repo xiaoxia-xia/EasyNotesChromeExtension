@@ -3,15 +3,36 @@
   <head>
     <title>placeholder</title>
     <link rel="stylesheet" href="button.css">
+    
   </head>
   <body>
-    <button id="changeColor"></button>
+    <!-- <button id="changeColor"></button> -->
+
+    <h1>NOTEPAD</h1>
+
+    <input id ="title_input" name = "title_" placeholder="Enter New Title" 
+    spellcheck="true" autocomplete="on" autocorrect="on" autocapitalize="on" type="text" value = ''></input>
+
+    
     <!-- declaring the text area to put text in the plugin. -->
-    <textarea id ="input" name = "note_pad" rows = "10" cols = "50" placeholder="Enter Notes Here!" 
+    <textarea id ="notes_input" name = "note_pad" rows = "10" cols = "50" placeholder="Enter Notes Here!" 
     spellcheck="true" autocomplete="on" autocorrect="on" autocapitalize="on" type="text" value = ''></textarea>    
     
+    <!-- Created the buttons -->
+    <div class = "save-button-Group"> 
+      <button id="save1" type = "button" class="button"> Save1 </button>
+      <button type = "button" id = "save2" class="button"> Save2 </button>
+      <button type = "button" id = "save3" class="button"> Save3 </button>
+    </div>
+    
+    <div class = "load-button-Group">
+      <button type = "button" id = "load1" class="button"> Load1 </button>
+      <button type = "button" id = "load2" class="button"> Load2 </button>
+      <button type = "button" id = "load3" class="button"> Load3 </button>
+    </div>
+    
     <script src="popup.js"></script>
-    <!-- <script src="inputShows.js"></script> -->
 
+    <!-- end of buttons -->
   </body>
 </html>
