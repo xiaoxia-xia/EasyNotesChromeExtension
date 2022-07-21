@@ -1,8 +1,4 @@
 //Declare variable for inputs
-
-// let title_value = "";
-// let notes_value = "";
-
 let title_value_1 = "";
 let title_value_2 = "";
 let title_value_3 = "";
@@ -10,19 +6,6 @@ let title_value_3 = "";
 let notes_value_1 = "";
 let notes_value_2 = "";
 let notes_value_3 = "";
-
-// chrome.storage.sync.set(title_value);
-// chrome.storage.sync.set(notes_value);
-
-//Set the variable initialiy to avoid bugs.
-// chrome.storage.sync.set(title_value_1);
-// chrome.storage.sync.set(title_value_2);
-// chrome.storage.sync.set(title_value_3);
-
-// chrome.storage.sync.set(notes_value_1);
-// chrome.storage.sync.set(notes_value_2);
-// chrome.storage.sync.set(notes_value_3);
-
 
 //Get all input buttons.
 let title_box = document.getElementById("title_input");
@@ -36,6 +19,32 @@ let load_button1 = document.getElementById("load1");
 let load_button2 = document.getElementById("load2");
 let load_button3 = document.getElementById("load3");
 
+// /**
+//  * Set the button's color with the corresponding color.
+//  */
+// function setButtonColor(color1, color2, color3){
+//   console.log("hit");
+//   save_button1.style.backgroundColor = color1;
+//   load_button1.style.backgroundColor = color1;
+//   save_button2.style.backgroundColor = color2;
+//   load_button2.style.backgroundColor = color2;
+//   save_button3.style.backgroundColor = color3;
+//   load_button3.style.backgroundColor = color3;
+// }
+
+/**
+ * set the button's class name to default.
+ */
+function setClassName(){
+  load_button1.className = "button";
+  load_button2.className = "button";
+  load_button3.className = "button";
+  
+  save_button1.className = "button";
+  save_button2.className = "button";
+  save_button3.className = "button";
+}
+
 
 // let save_buttons = document.getElementsByClassName();
 
@@ -44,6 +53,11 @@ save_button1.addEventListener("click", async() =>{
   notes_value_1 = notes_box.value;
   chrome.storage.sync.set({title_value_1});
   chrome.storage.sync.set({notes_value_1});
+
+  setClassName();
+  save_button1.className = "select_button";
+ // setButtonColor("red","white", "white");
+
   }
 );
 
@@ -54,6 +68,11 @@ load_button1.addEventListener("click", async() => {
   chrome.storage.sync.get("notes_value_1", ({ notes_value_1 }) => {
     notes_box.value = notes_value_1;
   });
+  setClassName();
+  load_button1.className = "select_button";
+  // setButtonColor("red","white", "white");
+  
+
 });
 
 
@@ -63,7 +82,11 @@ save_button2.addEventListener("click", async() =>{
   notes_value_2 = notes_box.value;
   chrome.storage.sync.set({title_value_2});
   chrome.storage.sync.set({notes_value_2});
+  setClassName();
+  save_button2.className = "select_button";
+  // setButtonColor("white","red", "white");
   }
+  
 );
 
 load_button2.addEventListener("click", async() => {
@@ -73,6 +96,9 @@ load_button2.addEventListener("click", async() => {
   chrome.storage.sync.get("notes_value_2", ({ notes_value_2 }) => {
     notes_box.value = notes_value_2;
   });
+  setClassName();
+  load_button2.className = "select_button";
+  //setButtonColor("white","red", "white");
 });
 
 //---------------BUTTON 3-----------------------------
@@ -81,6 +107,10 @@ save_button3.addEventListener("click", async() =>{
   notes_value_3 = notes_box.value;
   chrome.storage.sync.set({title_value_3});
   chrome.storage.sync.set({notes_value_3});
+  setClassName();
+  save_button3.className = "select_button";
+  //setButtonColor("white","white", "red");
+
   }
 );
 
@@ -91,73 +121,7 @@ load_button3.addEventListener("click", async() => {
   chrome.storage.sync.get("notes_value_3", ({ notes_value_3 }) => {
     notes_box.value = notes_value_3;
   });
+  setClassName();
+  load_button3.className = "select_button";
+  //setButtonColor("white","white", "red");
 });
-
-
-// // Initialize butotn with users's prefered color
-// // let changeColor = document.getElementById("changeColor");
-
-// let value_ = "";
-// chrome.storage.sync.set({value_});
-
-// // Represents the textBox.
-// let input_ = document.getElementById("notes_input");
-// // input_.value += "FWIOEJFIOWEJFOIJWEIOFJWEOIJFOWIEJFOIWEIJO";
-// // console.log(input_.value);
-
-// /**
-//  * Stores the value whenever the textbox is clicked.
-//  */
-// input_.addEventListener("click", async() =>
-// { 
-//   value_ = input_.value;
-//   chrome.storage.sync.set({value_});
-// }
-// );
-
-// /**
-//  * retreives the value from the chrome storage.
-//  */
-// chrome.storage.sync.get("value_", ({ value_ }) => {
-//   //To avoid bug for undefined?
-//   // if (value_ == undefined){
-//   //   value_ = '';
-//   // }
-//   // else if (value_ == null){
-//   //   value_ = '';
-//   // }
-//   input_.value = value_;
-// });
-
-
-
-// // The color stuff..
-// chrome.storage.sync.get("color", ({ color }) => {
-//   //Set the color of the button, ( don't effect the function tho. )
-//   // console.log("Hello World");
-//   changeColor.style.backgroundColor = color;
-// });
-
-// // When the button is clicked, inject setPageBackgroundColor into current page
-// changeColor.addEventListener("click", async () => {
-//   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-//   // console.log("Hello World");
-
-//     //Function calls.
-//   chrome.scripting.executeScript({
-//     target: { tabId: tab.id },
-//     function: setPageBackgroundColor,
-//   });
-// });
-
-
-
-// // The body of this function will be execuetd as a content script inside the
-// // current page
-// function setPageBackgroundColor() {
-//   chrome.storage.sync.get("color", ({ color }) => {
-//     //Incharge of the actual thing that controls the background of the chrome page.
-//     document.body.style.backgroundColor = color;
-//     // console.log("Hello World");
-//   });
-// }

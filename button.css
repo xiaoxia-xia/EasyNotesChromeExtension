@@ -1,10 +1,23 @@
-button {
+.button {
   height: 40px;
   width: 27%;
   outline: none;
   margin: 10px;
   border: none;
   border-radius: 1px;
+  border-color: black;
+
+}
+
+.select_button {
+  height: 40px;
+  width: 27%;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 1px;
+  border-color: black;
+  background-color: rgb(254, 100, 106);
 }
 
 #title_input{
@@ -44,9 +57,11 @@ button.current {
   display: table;
 }
 
-.save-button-Group button:hover{
+.button:hover{
   background-color: bisque;
 }
-.load-button-Group button:hover{
+
+.select_button:hover{
+  /* background-color: rgb(109, 253, 26); */
   background-color: bisque;
 }
