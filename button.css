@@ -21,3 +21,19 @@ button.current {
   box-shadow: 0 0 0 2px white,
               0 0 0 4px black;
 }
+
+.button-Group{
+  /* border: 1px;
+  padding: 10px; */
+  cursor: pointer;
+  float: left;
+}
+
+.button-Group::after{
+  clear: both;
+  display: table;
+}
+
+.button-Group button:hover{
+  background-color: bisque;
+}
