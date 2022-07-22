@@ -1,2 +1,2 @@
-# ChromeExtensionTest
-Some basic tries of developing Chrome Extension
+# EasyNotes Chrome Extension
+Description: Have you ever had issues with trying to write something quickly but can't find a piece of paper around you? Now it's no longer a problem, use our EasyNotes app and it allows you to have access to 3 save files and 3 load files to keep track of your most important thoughts so that you don't have to worry about being interrupted by other things. The application is designed with a mindset of userfriendly and comes with an easy guide on how to use that is very easy to follow. More updates for more features may come in the future.

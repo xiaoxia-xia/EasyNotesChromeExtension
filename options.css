@@ -1,0 +1,78 @@
+body{
+    /* background:transparent image-url('image.png') left top no-repeat; */
+    background-image: url("/images/pexels-photo-316466.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: lightgoldenrodyellow;
+    /* background-color: lightyellow; */
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+h1 {
+    /* border: 2px solid rgb(245, 245, 238); */
+    text-align:left;
+    font-size: 55px;
+    background-color: rgb(245, 245, 238);
+    font-style: bold;
+    padding-right: 300px;
+    /* margin: auto; */
+
+    display: table;
+    margin: auto;
+    border-radius: 1em;
+    background: #333;
+    color: #eee;
+    padding: 0 0.5em;
+    line-height:1em;
+}
+
+h2{
+    text-align: left;
+    font-size: 32px;
+    /* background-color: lightgoldenrodyellow; */
+    padding-right: 300px;
+    
+    
+    /* display: table;
+    border-radius: 1em;
+    background: #333;
+    color: #eee;
+    padding: 0 0.5em;
+    line-height:1em; */
+}
+
+h3{
+    text-align: left;
+    font-size: 25px;
+    /* background-color: lightgoldenrodyellow; */
+    padding-right: 300px;
+
+    /* display: table;
+    border-radius: 1em;
+    background: #333;
+    color: #eee;
+    padding: 0 0.5em;
+    line-height:1em; */
+}
+
+p{
+    text-align: left;
+    font-size: 14px;
+    /* background-color: lightyellow; */
+    padding-right: 300px;
+}
+
+a{
+    text-align: left;
+    font-size: 18px;
+}
+
+
+a:hover{
+    text-decoration: underline;
+}
