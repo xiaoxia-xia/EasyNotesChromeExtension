@@ -1,5 +1,6 @@
 h1 {
   text-align:center;
+  margin: 10px;
 }
 
 .button {
@@ -20,6 +21,8 @@ h1 {
   width: 27%;
   outline: none;
   margin: 10px;
+  margin-top: 3px;
+  margin-bottom: 5px;
   border: none;
   border-radius: 1px;
   border-color: black;
@@ -32,26 +35,17 @@ h1 {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  size: "100";
 }
 
 #notes_input{
   background-color: whitesmoke;
   width: 500px;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 3px 0;
   box-sizing: border-box;
-  size: "100";
-}
-
-button.current {
-  box-shadow: 0 0 0 2px white,
-              0 0 0 4px black;
 }
 
 .button-Group{
-  /* border: 1px;
-  padding: 10px; */
   height: auto;
   width:100%;
   cursor: pointer;
