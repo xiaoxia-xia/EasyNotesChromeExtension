@@ -1,6 +1,11 @@
 body{
-    background:transparent image-url('image.png') left top no-repeat;
-    background-color: lightyellow;
+    /* background:transparent image-url('image.png') left top no-repeat; */
+    background-image: url("/images/pexels-photo-316466.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: lightgoldenrodyellow;
+    /* background-color: lightyellow; */
     display: block;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -9,29 +14,57 @@ body{
 }
 
 h1 {
-    border: 1px solid yellow;
-    text-align:center;
-    font-size: 45px;
-    background-color: lightgoldenrodyellow;
+    /* border: 2px solid rgb(245, 245, 238); */
+    text-align:left;
+    font-size: 55px;
+    background-color: rgb(245, 245, 238);
     font-style: bold;
+    padding-right: 300px;
+    /* margin: auto; */
+
+    display: table;
+    margin: auto;
+    border-radius: 1em;
+    background: #333;
+    color: #eee;
+    padding: 0 0.5em;
+    line-height:1em;
 }
 
 h2{
     text-align: left;
-    font-size: 35px;
-    background-color: lightgoldenrodyellow;
+    font-size: 32px;
+    /* background-color: lightgoldenrodyellow; */
+    padding-right: 300px;
+    
+    
+    /* display: table;
+    border-radius: 1em;
+    background: #333;
+    color: #eee;
+    padding: 0 0.5em;
+    line-height:1em; */
 }
 
 h3{
     text-align: left;
     font-size: 25px;
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
+    padding-right: 300px;
+
+    /* display: table;
+    border-radius: 1em;
+    background: #333;
+    color: #eee;
+    padding: 0 0.5em;
+    line-height:1em; */
 }
 
 p{
     text-align: left;
     font-size: 14px;
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
+    padding-right: 300px;
 }
 
 a{

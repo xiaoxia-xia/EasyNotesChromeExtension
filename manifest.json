@@ -1,5 +1,5 @@
 {
-  "name": "ChromeExtensionDummyCode",
+  "name": "EasyNotes",
   "description": "Try and testing out the chrome extension's api and the functionalities accordingly.",
   "version": "1.0",
   "manifest_version": 3,
