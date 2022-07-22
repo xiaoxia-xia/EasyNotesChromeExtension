@@ -1,0 +1,45 @@
+body{
+    background:transparent image-url('image.png') left top no-repeat;
+    background-color: lightyellow;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+h1 {
+    border: 1px solid yellow;
+    text-align:center;
+    font-size: 45px;
+    background-color: lightgoldenrodyellow;
+    font-style: bold;
+}
+
+h2{
+    text-align: left;
+    font-size: 35px;
+    background-color: lightgoldenrodyellow;
+}
+
+h3{
+    text-align: left;
+    font-size: 25px;
+    background-color: lightgoldenrodyellow;
+}
+
+p{
+    text-align: left;
+    font-size: 14px;
+    background-color: lightyellow;
+}
+
+a{
+    text-align: left;
+    font-size: 18px;
+}
+
+
+a:hover{
+    text-decoration: underline;
+}
