@@ -1,6 +1,6 @@
 {
   "name": "EasyNotes",
-  "description": "A Google extension that allows user to put down information in a quick and safe location. Allows user to take notes during their Google Chrome Browser experience.",
+  "description": "Allows user to put down information in a quick and safe location. Enhance their Google Chrome Browser experience.",
   "version": "0.0.0.1",
   "manifest_version": 3,
   "background": {
